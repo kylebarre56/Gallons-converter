@@ -1,0 +1,30 @@
+public class GallonsConverter {
+    public static void main(String[] args) {
+        // 1 gallon = 3.79 liters
+        double gallonConversionFactor = 3.79;
+
+        // set the range for gallons
+        int minGallon = 1;
+        int maxGallon = 100;
+
+        // set the increment value
+        int increment = 4;
+
+        // initialize the counter
+        int lineCounter = 0;
+
+        for (int i = minGallon; i <= maxGallon; i += increment) {
+            // convert gallons to liters and display
+            double liters = i * gallonConversionFactor;
+            System.out.printf("%d gallons = %.2f liters%n", i, liters);
+
+            // increment line counter
+            lineCounter++;
+
+            // print an empty line after every 5 lines
+            if (lineCounter % 5 == 0) {
+                System.out.println();
+            }
+        }
+    }
+}
